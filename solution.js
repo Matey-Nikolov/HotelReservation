@@ -25,6 +25,21 @@ function cleanData(e) {
     changeContent('search-form-content');
 }
 
+document.querySelector('#confirm-back-btn').addEventListener('click', (e) => getBackToPersonalData(e));
+
+function getBackToPersonalData(e) {
+    e.preventDefault();
+    changeContent('guest-details-form-content');
+}
+
+
+document.querySelector('#confirm-reservation').addEventListener('click', (e) => showThanksPage(e));
+
+function showThanksPage(e) {
+    e.preventDefault();
+    changeContent('thank-you-content');
+}
+
 
 document.querySelector('#search-back-btn').addEventListener('click', (e) => fillSearchForm(e));
 
@@ -81,4 +96,3 @@ function searchFormData(e) {
         changeContent('search-result-form-content');
     }
 }
-
